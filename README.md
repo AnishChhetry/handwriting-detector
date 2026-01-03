@@ -24,7 +24,7 @@ The AI learns to recognize **62 classes**: Uppercase (A-Z), Lowercase (a-z), and
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/AnishChhetry/handwriting-detector.git](https://github.com/AnishChhetry/handwriting-detector.git)
+    git clone https://github.com/AnishChhetry/handwriting-detector.git
     cd handwriting-detector
     ```
 
