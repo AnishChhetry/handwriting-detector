@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# IDE settings (VS Code, PyCharm, Mac)
+.vscode/
+.idea/
+.DS_Store
+
+# Application Data (Exclude these so every user starts fresh)
+# If you WANT to share your dataset on GitHub, remove the lines below.
+data/
+letter.keras
+
+# Logs
+*.log
+
+# Mac system files
+.DS_Store
