@@ -71,7 +71,7 @@ To see which letters have the most data and which are neglected, you can run the
 **Run from the root directory:**
 ```bash
 python scripts/data_distribution.py
-
+```
 * This will open a bar chart showing the frequency of every character in your dataset.
 * Use this to decide which characters to focus on drawing in the "Add Data" section.
 
