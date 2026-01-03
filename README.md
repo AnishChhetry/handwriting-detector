@@ -10,6 +10,7 @@ The AI learns to recognize **62 classes**: Uppercase (A-Z), Lowercase (a-z), and
 * **Crowd-Sourced Dataset:** Every drawing is saved to a NumPy dataset (`.npy`), allowing the dataset to grow over time.
 * **In-App Training:** No need for separate scripts. Click "Train Model" in the UI to retrain the neural network on the latest data immediately.
 * **Real-Time Feedback:** Test the model in "Practice Mode" and get instant feedback on prediction confidence.
+* **Data Visualization:** Includes a script to visualize class distribution, helping you see which characters need more training data.
 * **State-of-the-Art Architecture:** Uses a CNN (Convolutional Neural Network) with TensorFlow/Keras for high accuracy.
 
 ## 🛠️ Tech Stack
@@ -17,6 +18,7 @@ The AI learns to recognize **62 classes**: Uppercase (A-Z), Lowercase (a-z), and
 * **Backend:** Python, Flask
 * **ML/AI:** TensorFlow, Keras, NumPy
 * **Frontend:** HTML5 Canvas, Bootstrap 5, JavaScript
+* **Visualization:** Matplotlib
 
 ## 🚀 Installation
 
@@ -62,17 +64,30 @@ The AI learns to recognize **62 classes**: Uppercase (A-Z), Lowercase (a-z), and
     * Draw any character.
     * Click "Check" to see if the AI can recognize it!
 
+## 📊 Dataset Statistics
+
+To see which letters have the most data and which are neglected, you can run the visualization script.
+
+**Run from the root directory:**
+```bash
+python scripts/data_distribution.py
+
+* This will open a bar chart showing the frequency of every character in your dataset.
+* Use this to decide which characters to focus on drawing in the "Add Data" section.
+
 ## 📂 Project Structure
 
 ```text
 handwriting-detector/
-├── app.py              # Main Flask application and training logic
-├── data/               # Stores the .npy datasets (created automatically)
-├── templates/          # HTML templates (Bootstrap 5)
+├── app.py                   # Main Flask application and training logic
+├── data/                    # Stores the .npy datasets (created automatically)
+├── scripts/                 
+│   └── data_distribution.py # Visualization utility to check dataset balance
+├── templates/               # HTML templates (Bootstrap 5)
 │   ├── base.html
 │   ├── index.html
 │   ├── addData.html
 │   └── practice.html
-├── letter.keras        # The trained AI model (generated after training)
-├── requirements.txt    # Python dependencies
+├── letter.keras             # The trained AI model (generated after training)
+├── requirements.txt         # Python dependencies
 └── README.md
